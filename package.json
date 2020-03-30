@@ -1,0 +1,57 @@
+{
+  "name": "tropy-plugin-csl",
+  "version": "1.0.0",
+  "description": "Tropy to CSL/JSON Export Plugin",
+  "main": "index.js",
+  "scripts": {
+    "test": "electron-mocha --renderer test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tropy/tropy-plugin-csl.git"
+  },
+  "keywords": [
+    "tropy",
+    "csl",
+    "zotero"
+  ],
+  "author": "Sylvester Keil <sylvester@keil.or.at>",
+  "license": "AGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/tropy/tropy-plugin-csl/issues"
+  },
+  "homepage": "https://github.com/tropy/tropy-plugin-csl#readme",
+  "hooks": {
+    "export": true
+  },
+  "options": [
+    {
+      "field": "file",
+      "label": "Save as",
+      "hint": "Default output file",
+      "type": "save-file"
+    },
+    {
+      "field": "prompt",
+      "label": "Always ask?",
+      "hint": "Always ask where to save the output file.",
+      "type": "boolean",
+      "default": false
+    },
+    {
+      "field": "clipboard",
+      "label": "Copy to clipboard?",
+      "type": "boolean",
+      "default": false
+    },
+    {
+      "field": "template",
+      "label": "Template",
+      "type": "template"
+    }
+  ],
+  "devDependencies": {
+    "electron": "^8.0",
+    "electron-mocha": "^8.1.1"
+  }
+}

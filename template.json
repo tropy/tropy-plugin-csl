@@ -1,0 +1,53 @@
+{
+  "@context": "https://tropy.org/v1/contexts/template.jsonld",
+  "@id": "https://tropy.org/v1/templates/csl-plugin",
+  "@type": "https://tropy.org/v1/tropy#Template",
+  "type": "https://tropy.org/v1/tropy#Item",
+  "name": "CSL Export Template",
+  "version": null,
+  "domain": [],
+  "creator": "",
+  "description": "",
+  "field": [
+    {
+      "datatype": "http://www.w3.org/2001/XMLSchema#string",
+      "label": "type",
+      "property": "http://purl.org/dc/elements/1.1/type"
+    },
+    {
+      "datatype": "http://www.w3.org/2001/XMLSchema#string",
+      "label": "language",
+      "property": "http://purl.org/dc/elements/1.1/language"
+    },
+    {
+      "datatype": "http://www.w3.org/2001/XMLSchema#string",
+      "label": "title",
+      "property": "http://purl.org/dc/elements/1.1/title"
+    },
+    {
+      "datatype": "http://www.w3.org/2001/XMLSchema#string",
+      "label": "title-short",
+      "property": "http://purl.org/dc/terms/alternative"
+    },
+    {
+      "datatype": "http://www.w3.org/2001/XMLSchema#string",
+      "label": "issued",
+      "property": "http://purl.org/dc/elements/1.1/date"
+    },
+    {
+      "datatype": "http://www.w3.org/2001/XMLSchema#string",
+      "label": "id",
+      "property": "http://purl.org/dc/elements/1.1/identifier"
+    },
+    {
+      "datatype": "http://www.w3.org/2001/XMLSchema#string",
+      "label": "abstract",
+      "property": "http://purl.org/dc/elements/1.1/description"
+    },
+    {
+      "datatype": "http://www.w3.org/2001/XMLSchema#string",
+      "label": "author",
+      "property": "http://purl.org/dc/elements/1.1/creator"
+    }
+  ]
+}
