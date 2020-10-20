@@ -29,8 +29,10 @@ class CSLPlugin {
 
   async export(data) {
     let out = []
-    let exp = await this.jsonld.expand(data)
-    let template = loadTemplate(this.options.template)
+    let exp = await this.expand(data)
+    let template = loadTemplate(
+      this.context.win?.store.getState(),
+      this.options.template)
 
     // TODO check if item or photo template
 
@@ -51,7 +53,9 @@ class CSLPlugin {
       let { file, filters, prompt } = this.options
 
       if (!file || prompt) {
-        file = await this.dialog.save({ defaultPath: file, filters })
+        file = await this.dialog.save({
+          defaultPath: file,
+          filters })
       }
 
       if (!file) return
@@ -60,11 +64,11 @@ class CSLPlugin {
   }
 
   get dialog() {
-    return this.context.require('../dialog')
+    return this.context.dialog
   }
 
-  get jsonld() {
-    return this.context.require('jsonld')
+  async expand(data) {
+    return this.context.json.expand(data)
   }
 
   get logger() {
@@ -81,8 +85,8 @@ CSLPlugin.defaults = {
   prompt: false
 }
 
-const loadTemplate = (id) =>
-  global.state.ontology.template[id] || TEMPLATE
+const loadTemplate = (state, id) =>
+  state?.ontology.template[id] || TEMPLATE
 
 const cast = (value, label) => {
   switch (TYPES[label]) {
