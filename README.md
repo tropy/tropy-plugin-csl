@@ -35,6 +35,56 @@ fields are currently recognized:
 * recipient
 * reviewed-author
 * translator
+* abstract
+* annote
+* archive
+* archive_location
+* archive-place
+* authority
+* call-number
+* citation-label
+* citation-number
+* collection-title
+* container-title
+* container-title-short
+* dimensions
+* DOI
+* event
+* event-place
+* first-reference-note-number
+* genre
+* ISBN
+* ISSN
+* jurisdiction
+* keyword
+* locator
+* medium
+* note
+* original-publisher
+* original-publisher-place
+* original-title
+* page
+* page-first
+* PMCID
+* PMID
+* publisher
+* publisher-place
+* references
+* reviewed-title
+* scale
+* section
+* source
+* status
+* title
+* title-short
+* type
+* URL
+* version
+* year-suffix
 
 To use your custom mapping, select your template in the plugin's
 configuration.
+
+To import to Zotero successfully, your exported data _must_ include the
+`type` field with a valid Zotero item type such as 'book', 'bookSection',
+or 'journalArticle'.
