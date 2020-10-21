@@ -1,5 +1,5 @@
 # tropy-plugin-csl
-Tropy plugin to export your items to Zoterao as CSL/JSON
+Tropy plugin to export your items to Zotero as CSL/JSON
 
 # Custom Templates
 To customize how your Tropy item is mapped to CSL/JSON and Zotero,
