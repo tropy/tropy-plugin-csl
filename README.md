@@ -86,5 +86,5 @@ To use your custom mapping, select your template in the plugin's
 configuration.
 
 To import to Zotero successfully, your exported data _must_ include the
-`type` field with a valid Zotero item type such as 'book', 'bookSection',
-or 'journalArticle'.
+`type` field with a valid Zotero item type such as 'book', 'chapter',
+or 'article-journal' ([CSL types](https://docs.citationstyles.org/en/1.0.1/specification.html#appendix-iii-types)).
