@@ -1,6 +1,6 @@
 {
   "name": "tropy-plugin-csl",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Tropy to CSL/JSON Export Plugin",
   "main": "index.js",
   "scripts": {
