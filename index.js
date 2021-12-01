@@ -17,8 +17,9 @@ class CSLPlugin {
 
   convert(item, template) {
     let csl = {}
+    let fields = template.fields || template.field
 
-    for (let { property, label } of template.field) {
+    for (let { property, label } of fields) {
       if (property in item) {
         csl[label] = cast(item[property][0]?.['@value'], label)
       }
@@ -31,7 +32,7 @@ class CSLPlugin {
     let out = []
     let exp = await this.expand(data)
     let template = loadTemplate(
-      this.context.win?.store.getState(),
+      this.context.window?.store.getState(),
       this.options.template)
 
     // TODO check if item or photo template
