@@ -2,6 +2,7 @@
   "name": "tropy-plugin-csl",
   "version": "1.0.1",
   "description": "Tropy to CSL/JSON Export Plugin",
+  "icon": "icon.svg",
   "main": "index.js",
   "scripts": {
     "test": "electron-mocha --renderer test"

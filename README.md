@@ -1,4 +1,6 @@
-# tropy-plugin-csl
+<p align="center"><img src="icon.svg"></p>
+
+<h1 align="center">tropy-plugin-csl</h1>
 Tropy plugin to export your items to Zotero as CSL/JSON
 
 # Custom Templates
