@@ -23,7 +23,7 @@ jobs:
 
       - name: Install dependencies and build
         run: |
-          npm ci --no-progress
+          npm ci
           npm run build
 
       - name: Generate version name
