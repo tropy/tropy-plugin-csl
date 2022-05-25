@@ -5,7 +5,6 @@ const { clipboard } = require('electron')
 
 const TEMPLATE = require('./template.json')
 
-
 class CSLPlugin {
   constructor(options, context) {
     this.context = context
@@ -33,7 +32,8 @@ class CSLPlugin {
     let exp = await this.expand(data)
     let template = loadTemplate(
       this.context.window?.store.getState(),
-      this.options.template)
+      this.options.template
+    )
 
     // TODO check if item or photo template
 
@@ -49,14 +49,14 @@ class CSLPlugin {
   async write(text) {
     if (this.options.clipboard) {
       clipboard.write({ text })
-
     } else {
       let { file, filters, prompt } = this.options
 
       if (!file || prompt) {
         file = await this.dialog.save({
           defaultPath: file,
-          filters })
+          filters
+        })
       }
 
       if (!file) return
@@ -79,15 +79,16 @@ class CSLPlugin {
 
 CSLPlugin.defaults = {
   clipboard: false,
-  filters: [{
-    name: 'CSL/JSON',
-    extensions: ['json']
-  }],
+  filters: [
+    {
+      name: 'CSL/JSON',
+      extensions: ['json']
+    }
+  ],
   prompt: false
 }
 
-const loadTemplate = (state, id) =>
-  state?.ontology.template[id] || TEMPLATE
+const loadTemplate = (state, id) => state?.ontology.template[id] || TEMPLATE
 
 const cast = (value, label) => {
   switch (TYPES[label]) {
