@@ -89,4 +89,4 @@ configuration.
 
 To import to Zotero successfully, your exported data _must_ include the
 `type` field with a valid Zotero item type such as 'book', 'chapter',
-or 'article-journal' ([CSL types](https://docs.citationstyles.org/en/1.0.1/specification.html#appendix-iii-types)).
+or 'article-journal' ([CSL types](https://docs.citationstyles.org/en/stable/specification.html#appendix-iii-types)).
