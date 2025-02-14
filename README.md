@@ -3,7 +3,11 @@
 <h1 align="center">tropy-plugin-csl</h1>
 Tropy plugin to export your items to Zotero as CSL/JSON
 
-# Custom Templates
+## Installation
+
+Download the `.zip` file, named `tropy-plugin-csl` plus a version number, from the [latest release](https://github.com/tropy/tropy-plugin-csl/releases/latest) on GitHub. In Tropy, navigate to *Preferences… > Plugins* and click *Install Plugin* to select the downloaded ZIP file.
+
+## Custom Templates
 To customize how your Tropy item is mapped to CSL/JSON and Zotero,
 duplicate your Tropy template in Tropy's template editor and assign
 each field you want to export a CSL/JSON field by setting the template
