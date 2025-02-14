@@ -6,7 +6,7 @@
   "icon": "icon.svg",
   "main": "index.js",
   "scripts": {
-    "test": "electron-mocha --renderer test",
+    "test": "electron-mocha --no-sandbox --renderer test",
     "lint": "eslint --color src test",
     "build": "rollup -c rollup.config.js",
     "watch": "rollup -c -w rollup.config.js"
